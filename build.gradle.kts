@@ -4,6 +4,6 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
 }
 
-tasks.register("clean", Delete::class) {
+tasks.register<org.gradle.api.tasks.Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
