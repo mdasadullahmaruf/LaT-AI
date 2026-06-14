@@ -21,7 +21,7 @@ jobs:
           gradle-version: 8.5
 
       - name: Setup Wrapper Files Locally
-        run: gradle wrapper --gradle-version 8.5
+        run: gradle wrapper --gradle-version 8.5 --validate-url
 
       - name: Enforce Runner Execution Permissions
         run: chmod +x gradlew
