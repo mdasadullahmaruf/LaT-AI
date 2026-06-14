@@ -13,13 +13,11 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: gradle
 
-      - name: Install Missing Gradle Wrapper Files
+      - name: Setup Global Gradle Runner
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.5
-          generate-submit-architecture-generate: true
 
       - name: Execute Production Debug Compilation
         run: gradle :app:assembleDebug
