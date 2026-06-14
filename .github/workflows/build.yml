@@ -15,7 +15,12 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Generate Local Gradle Wrapper
+      - name: Install Native Gradle Runner
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.5
+
+      - name: Setup Wrapper Files Locally
         run: gradle wrapper --gradle-version 8.5
 
       - name: Enforce Runner Execution Permissions
