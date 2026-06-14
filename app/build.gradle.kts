@@ -15,10 +15,9 @@ android {
         versionName = "1.0"
     }
 
-    // Force the compiler to run smoothly even without source code asset folders
     sourceSets {
         getByName("main") {
-            manifest.srcFile("AndroidManifest.xml")
+            manifest.srcFile = "AndroidManifest.xml"
         }
     }
 
